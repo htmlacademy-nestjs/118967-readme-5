@@ -1,7 +1,7 @@
 # Личный проект «Readme»
 
 * Студент: [Дмитрий Мишагин](https://up.htmlacademy.ru/nodejs-2/5/user/118967).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Сушко](https://up.htmlacademy.ru/nodejs-2/5/user/281347).
 
 ---
 
