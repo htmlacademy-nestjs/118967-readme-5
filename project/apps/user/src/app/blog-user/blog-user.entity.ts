@@ -1,4 +1,4 @@
-import { AuthUser, User } from '@project/shared-app-types';
+import { AuthUser } from '@project/shared-app-types';
 import { Entity } from '@project/shared-core';
 import { SALT_ROUNDS } from './blog-user.constant';
 import { compare, genSalt, hash } from 'bcrypt';
@@ -32,11 +32,14 @@ export class BlogUserEntity implements AuthUser, Entity<string> {
     };
   }
 
-  public populate(data: User): void {
+  public populate(data: AuthUser): void {
     this.firstName = data.firstName;
     this.lastName = data.lastName;
     this.email = data.email;
     this.avatar = data.avatar;
+    this.registrationDate = data.registrationDate;
+    this.publicationCount = data.publicationCount;
+    this.subscribersCount = data.subscribersCount;
   }
 
   public async setPassword(password: string): Promise<BlogUserEntity> {
